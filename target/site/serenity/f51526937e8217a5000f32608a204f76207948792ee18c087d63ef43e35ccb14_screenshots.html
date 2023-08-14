@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="ed4a36754ee91fe8073c08339ec66b137cd296e59a80c04cc37fc70fb502f0c6.html">Add Products And Checkout</a></span>
+                > <span class="truncate-60"><a
+                    href="f51526937e8217a5000f32608a204f76207948792ee18c087d63ef43e35ccb14.html">Add products to cart and checkout </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 13-08-2023 19:59</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Add Products And Checkout </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="d7d055c3a782deac55af5fa0b3adcb8d18e602f046db40a54a53918076ac8a22.html">Mac
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Add products to cart and checkout
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="ca0db48b2082d169065cb86a4a73e0eaafbf6e52421b2bde7f3498103a050064.png" title=" Given The user is in tab popular items" width="0"/>
+                <img src="ca0db48b2082d169065cb86a4a73e0eaafbf6e52421b2bde7f3498103a050064.png" title=" Santiago quintero click popular items" width="0"/>
+                <img src="8d4febff1cd83f9f3b3fb40a8643422dde072d56d8dc46c9b67e5a3a818acc1b.png" title=" Santiago Quintero clicks on Button of popular items" width="0"/>
+                <img src="4748139f75bde1a9834088dd1035b72dc109fcfa5ac1a4bfaa3011da288d21d8.png" title=" Santiago Quintero clicks on Button of popular items (completed)" width="0"/>
+                <img src="4748139f75bde1a9834088dd1035b72dc109fcfa5ac1a4bfaa3011da288d21d8.png" title=" Santiago quintero click popular items (completed)" width="0"/>
+                <img src="4748139f75bde1a9834088dd1035b72dc109fcfa5ac1a4bfaa3011da288d21d8.png" title=" Given The user is in tab popular items (completed)" width="0"/>
+                <img src="ec6258fdb2980c289b892b2ef97ffd0d93a6246cd8ce6ac29dc81686105c08e5.png" title=" When the user select and add of the products" width="0"/>
+                <img src="ec6258fdb2980c289b892b2ef97ffd0d93a6246cd8ce6ac29dc81686105c08e5.png" title=" Santiago quintero add table" width="0"/>
+                <img src="ec6258fdb2980c289b892b2ef97ffd0d93a6246cd8ce6ac29dc81686105c08e5.png" title=" Santiago Quintero clicks on Button to view table" width="0"/>
+                <img src="d7a6d8ddddd58c0865e7fffd054eee319ba8cc785fc63c9ae34a870ab6a55aa9.png" title=" Santiago Quintero clicks on Button to view table (completed)" width="0"/>
+                <img src="d7a6d8ddddd58c0865e7fffd054eee319ba8cc785fc63c9ae34a870ab6a55aa9.png" title=" Santiago Quintero clicks on Button to select color" width="0"/>
+                <img src="bfa05afd55cfc2a53eeac0b40c16588d698363cfd0133705e181b9a95b3f3899.png" title=" Santiago Quintero clicks on Button to select color (completed)" width="0"/>
+                <img src="bfa05afd55cfc2a53eeac0b40c16588d698363cfd0133705e181b9a95b3f3899.png" title=" Santiago Quintero clicks on Button to select quantity" width="0"/>
+                <img src="c78ab5063b2111d1c2d9636b71659072e9813710bc09489ec9efce39f8fb9e49.png" title=" Santiago Quintero clicks on Button to select quantity (completed)" width="0"/>
+                <img src="c78ab5063b2111d1c2d9636b71659072e9813710bc09489ec9efce39f8fb9e49.png" title=" Santiago Quintero clicks on Button to select quantity" width="0"/>
+                <img src="7132af587d1e7e59e336715a6516ace55a8c501ec645134deb2be177502f7239.png" title=" Santiago Quintero clicks on Button to select quantity (completed)" width="0"/>
+                <img src="7132af587d1e7e59e336715a6516ace55a8c501ec645134deb2be177502f7239.png" title=" Santiago quintero add table (completed)" width="0"/>
+                <img src="7132af587d1e7e59e336715a6516ace55a8c501ec645134deb2be177502f7239.png" title=" Santiago quintero back page" width="0"/>
+                <img src="b895cf111bb86ff2966de7130bbe5cecc289b1d0ee7871d5cbefc5419cec9e48.png" title=" Santiago quintero back page (completed)" width="0"/>
+                <img src="b895cf111bb86ff2966de7130bbe5cecc289b1d0ee7871d5cbefc5419cec9e48.png" title=" Santiago quintero add pc" width="0"/>
+                <img src="291d380b7a7fb89904bb918dd99258d80a3c8c1eb222670b79be8d45a4ed8dd3.png" title=" Santiago Quintero clicks on Button to view pc" width="0"/>
+                <img src="0105dc84dd1ffec85892c6a1fbf4f3a3a3a105f8f11088f4fecefa8be62a954b.png" title=" Santiago Quintero clicks on Button to view pc (completed)" width="0"/>
+                <img src="0105dc84dd1ffec85892c6a1fbf4f3a3a3a105f8f11088f4fecefa8be62a954b.png" title=" Santiago Quintero clicks on Button to select quantity" width="0"/>
+                <img src="0a3ebe91b88cc253be8c6821e2b23c15b66a5f9993d61d12ba339a625321e009.png" title=" Santiago Quintero clicks on Button to select quantity (completed)" width="0"/>
+                <img src="0a3ebe91b88cc253be8c6821e2b23c15b66a5f9993d61d12ba339a625321e009.png" title=" Santiago Quintero clicks on Button to select quantity" width="0"/>
+                <img src="e6891ed216b66db270464b532aca978408f53675d9117c0745bee8f711d12c93.png" title=" Santiago Quintero clicks on Button to select quantity (completed)" width="0"/>
+                <img src="e6891ed216b66db270464b532aca978408f53675d9117c0745bee8f711d12c93.png" title=" Santiago quintero add pc (completed)" width="0"/>
+                <img src="e6891ed216b66db270464b532aca978408f53675d9117c0745bee8f711d12c93.png" title=" Santiago quintero back page" width="0"/>
+                <img src="b470bda0db5bc966e3236d5da22c85d3fa9eca2e7882c4b44ba45224d60396e7.png" title=" Santiago quintero back page (completed)" width="0"/>
+                <img src="b470bda0db5bc966e3236d5da22c85d3fa9eca2e7882c4b44ba45224d60396e7.png" title=" Santiago quintero add speaker" width="0"/>
+                <img src="b470bda0db5bc966e3236d5da22c85d3fa9eca2e7882c4b44ba45224d60396e7.png" title=" Santiago Quintero clicks on Button to view speaker" width="0"/>
+                <img src="cb8a27a21f82837e7d90ae736a1a5b617675bad318df8153cda3e8ba98691d14.png" title=" Santiago Quintero clicks on Button to view speaker (completed)" width="0"/>
+                <img src="cb8a27a21f82837e7d90ae736a1a5b617675bad318df8153cda3e8ba98691d14.png" title=" Santiago Quintero clicks on Button to select color" width="0"/>
+                <img src="a1dca4ec3a723c95ff40b0c372f191916aa8ecf82b2a3138157ddb4c3b25ff37.png" title=" Santiago Quintero clicks on Button to select color (completed)" width="0"/>
+                <img src="a1dca4ec3a723c95ff40b0c372f191916aa8ecf82b2a3138157ddb4c3b25ff37.png" title=" Santiago Quintero clicks on Button to select quantity" width="0"/>
+                <img src="6d9e7828bad646e19f76864bc574564b8744fee40370152e407051f8ec299661.png" title=" Santiago Quintero clicks on Button to select quantity (completed)" width="0"/>
+                <img src="6d9e7828bad646e19f76864bc574564b8744fee40370152e407051f8ec299661.png" title=" Santiago Quintero clicks on Button to select quantity" width="0"/>
+                <img src="255b9e3e15a7cc53a7cdd820722821ce15a17fa3d883eecee66f3370218e650d.png" title=" Santiago Quintero clicks on Button to select quantity (completed)" width="0"/>
+                <img src="255b9e3e15a7cc53a7cdd820722821ce15a17fa3d883eecee66f3370218e650d.png" title=" Santiago quintero add speaker (completed)" width="0"/>
+                <img src="255b9e3e15a7cc53a7cdd820722821ce15a17fa3d883eecee66f3370218e650d.png" title=" Santiago quintero back page" width="0"/>
+                <img src="dafdc2f85b5b30ec3940eb8f5a6bacd9edd0acb2bea4bc08af5ecd6692545fd8.png" title=" Santiago quintero click shopping cart" width="0"/>
+                <img src="dafdc2f85b5b30ec3940eb8f5a6bacd9edd0acb2bea4bc08af5ecd6692545fd8.png" title=" Santiago Quintero clicks on Text of successful add cart" width="0"/>
+                <img src="e6c39baf421d5acdd347c39b0583ea9a08e83fc21b02e38431e06b10d577334d.png" title=" Santiago Quintero clicks on Text of successful add cart (completed)" width="0"/>
+                <img src="e6c39baf421d5acdd347c39b0583ea9a08e83fc21b02e38431e06b10d577334d.png" title=" Santiago quintero click shopping cart (completed)" width="0"/>
+                <img src="e6c39baf421d5acdd347c39b0583ea9a08e83fc21b02e38431e06b10d577334d.png" title=" When the user select and add of the products (completed)" width="0"/>
+                <img src="cf3cff3fbab950b752bb5a11e124e09ac5d9b92f5bec2e8a804fff781d2505a5.png" title=" And the user enter of data in the form" width="0"/>
+                <img src="cf3cff3fbab950b752bb5a11e124e09ac5d9b92f5bec2e8a804fff781d2505a5.png" title=" Santiago quintero click shopping cart" width="0"/>
+                <img src="cf3cff3fbab950b752bb5a11e124e09ac5d9b92f5bec2e8a804fff781d2505a5.png" title=" Santiago Quintero clicks on Text of successful add cart" width="0"/>
+                <img src="7fc07c0012207aa9514f698c837a744fc7b3c10cb75009ee4bdcd81f334b8966.png" title=" Santiago quintero click shopping cart (completed)" width="0"/>
+                <img src="7fc07c0012207aa9514f698c837a744fc7b3c10cb75009ee4bdcd81f334b8966.png" title=" Santiago quintero sing up order payment" width="0"/>
+                <img src="7fc07c0012207aa9514f698c837a744fc7b3c10cb75009ee4bdcd81f334b8966.png" title=" Santiago Quintero clicks on Button to checkout" width="0"/>
+                <img src="f783cb14c951992f382881ab45e4e834d136b49d02a45b737af95f48faf94452.png" title=" Santiago Quintero clicks on Button to checkout (completed)" width="0"/>
+                <img src="f783cb14c951992f382881ab45e4e834d136b49d02a45b737af95f48faf94452.png" title=" Santiago Quintero enters 'Santi7' into Input username in the pay" width="0"/>
+                <img src="e766b08bcdbf0238679b6b5f280c8ef9b8a01f0df16f29876f94608f43a2fa4d.png" title=" Santiago Quintero enters 'Santi7' into Input username in the pay (completed)" width="0"/>
+                <img src="e766b08bcdbf0238679b6b5f280c8ef9b8a01f0df16f29876f94608f43a2fa4d.png" title=" Santiago Quintero enters 'S4nt14g000' into Input password in the pay" width="0"/>
+                <img src="b9726e4eb801c4f028dda362265dd08a186c3886804254762a5b4513217f5a8f.png" title=" Santiago Quintero enters 'S4nt14g000' into Input password in the pay (completed)" width="0"/>
+                <img src="b9726e4eb801c4f028dda362265dd08a186c3886804254762a5b4513217f5a8f.png" title=" Santiago quintero sing up order payment (completed)" width="0"/>
+                <img src="b9726e4eb801c4f028dda362265dd08a186c3886804254762a5b4513217f5a8f.png" title=" Santiago quintero pay now" width="0"/>
+                <img src="f61b19a070f554d955cff6a7a0319785edc884b8d261c4be70abf8b64066406c.png" title=" Santiago Quintero clicks on Button to login in the pay" width="0"/>
+                <img src="23daeb95d482787ef3bc2416583017c3b06fc35cc79ec399839ad9052ffb8922.png" title=" Santiago Quintero clicks on Button to login in the pay (completed)" width="0"/>
+                <img src="23daeb95d482787ef3bc2416583017c3b06fc35cc79ec399839ad9052ffb8922.png" title=" Santiago Quintero clicks on Button to next" width="0"/>
+                <img src="69c6037ab17eea9f6dc8e7e7b1b6a4c5d528cb97177485f30d6e9c667806ad84.png" title=" Santiago Quintero clicks on Button to next (completed)" width="0"/>
+                <img src="69c6037ab17eea9f6dc8e7e7b1b6a4c5d528cb97177485f30d6e9c667806ad84.png" title=" Santiago Quintero clicks on Button to selectmethod of pay" width="0"/>
+                <img src="7c761df100fafcc6a4c050079dd977e2f90c74f0526e6c8d61e1a500b83150dc.png" title=" Santiago Quintero clicks on Button to selectmethod of pay (completed)" width="0"/>
+                <img src="7c761df100fafcc6a4c050079dd977e2f90c74f0526e6c8d61e1a500b83150dc.png" title=" Santiago Quintero enters '1234567890123456' into Input to card number" width="0"/>
+                <img src="8bcc9e7d5aecde1b8604f53e1ff919e5728bd7f5ed0c5089d7494c1d0c4bea6d.png" title=" Santiago Quintero enters '1234567890123456' into Input to card number (completed)" width="0"/>
+                <img src="8bcc9e7d5aecde1b8604f53e1ff919e5728bd7f5ed0c5089d7494c1d0c4bea6d.png" title=" Santiago Quintero enters '3322' into Input to cvv" width="0"/>
+                <img src="e6e3be1aeddc087771a8ad536c6a89cb015d53c9f93f2ff8f891d0ad308caaaf.png" title=" Santiago Quintero enters '3322' into Input to cvv (completed)" width="0"/>
+                <img src="e6e3be1aeddc087771a8ad536c6a89cb015d53c9f93f2ff8f891d0ad308caaaf.png" title=" Santiago Quintero clicks on Button to select months of card" width="0"/>
+                <img src="889af81caf9db961c7d33555dee2996831067f92074afb0acfd2af761820f62b.png" title=" Santiago Quintero clicks on Button to select months of card (completed)" width="0"/>
+                <img src="889af81caf9db961c7d33555dee2996831067f92074afb0acfd2af761820f62b.png" title=" Santiago Quintero clicks on Button to select year of card" width="0"/>
+                <img src="e99bbaaf0eb7d0f69a279f1990ccdd07a72071a86d58491fa9dd882f3a99d8c4.png" title=" Santiago Quintero clicks on Button to select year of card (completed)" width="0"/>
+                <img src="e99bbaaf0eb7d0f69a279f1990ccdd07a72071a86d58491fa9dd882f3a99d8c4.png" title=" Santiago Quintero enters 'Santiago' into Input to card holder" width="0"/>
+                <img src="bc60cb8ffb28d1c18d470aa6e3bc03df4795b1d585bc3d45e0ebf18a957b69e8.png" title=" Santiago Quintero enters 'Santiago' into Input to card holder (completed)" width="0"/>
+                <img src="bc60cb8ffb28d1c18d470aa6e3bc03df4795b1d585bc3d45e0ebf18a957b69e8.png" title=" Santiago Quintero clicks on Button to pay" width="0"/>
+                <img src="d0c6abf52224e0760718b475e6d644a55f4cb7a76b4cd4c8fb9b381cd7c84556.png" title=" Santiago Quintero clicks on Button to pay (completed)" width="0"/>
+                <img src="d0c6abf52224e0760718b475e6d644a55f4cb7a76b4cd4c8fb9b381cd7c84556.png" title=" Santiago quintero pay now (completed)" width="0"/>
+                <img src="d0c6abf52224e0760718b475e6d644a55f4cb7a76b4cd4c8fb9b381cd7c84556.png" title=" And the user enter of data in the form (completed)" width="0"/>
+                <img src="e595e9e96407113b1866f1d9e79d5a27184f31aa840f82e223804f9f9ef19f11.png" title=" Then The user sees message of successful purchase" width="0"/>
+                <img src="e595e9e96407113b1866f1d9e79d5a27184f31aa840f82e223804f9f9ef19f11.png" title=" Then resutl add and pay should be (true)" width="0"/>
+                <img src="e595e9e96407113b1866f1d9e79d5a27184f31aa840f82e223804f9f9ef19f11.png" title=" Then The user sees message of successful purchase (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.9.4</span>
+</div>
+</body>
+</html>

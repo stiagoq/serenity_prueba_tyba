@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Enter the data to create a new user","Register a new user","SUCCESS","2023-08-13T19:58:39.546997-05:00[America/Bogota]","0.0","18.0"
+"Add products and checkout","Add products to cart and checkout","SUCCESS","2023-08-13T19:59:35.658242-05:00[America/Bogota]","0.0","20.71"
+"login home page","Login successful","SUCCESS","2023-08-13T19:59:05.447438-05:00[America/Bogota]","0.0","19.03"
