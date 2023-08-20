@@ -6,6 +6,6 @@ public class SearchException extends AssertionError {
     }
 
     public static String getNotMatchMessage(){
-        return ("the searching not get values");
+        return ("the page web isn't of test");
     }
 }
