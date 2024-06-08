@@ -1,7 +1,9 @@
 name: Trigger Target Workflow
 
 on:
+  # Escucha el evento workflow_dispatch para activar manualmente este flujo de trabajo
   workflow_dispatch:
+    # Define dos entradas requeridas: target_service y target_version
     inputs:
       target_service:
         description: 'Input a service name (e.g., demo-app)'
@@ -21,9 +23,10 @@ jobs:
           repo_owner="stiagoq" 
           repo_name="serenity_prueba_tyba"  
           event_type="trigger-workflow" 
-          service=${{ github.event.inputs.target_service }}"
+          service="${{ github.event.inputs.target_service }}"
           version="${{ github.event.inputs.target_version }}"
   
+          # Realiza la solicitud POST a la API de GitHub para desencadenar el evento en el repositorio de destino
           curl -L \
             -X POST \
             -H "Accept: application/vnd.github+json" \
