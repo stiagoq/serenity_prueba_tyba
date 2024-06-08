@@ -20,3 +20,6 @@ jobs:
           https://api.github.com/repos/stiagoq/serenity_prueba_tyba/dispatches \
           -d '{"event_type":"on-demand-test","client_payload":{"unit":false,"integration":true}}'
 
+      - env:
+            MESSAGE: ${{ github.event.client_payload.message }}
+        run: echo $MESSAGE
