@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger Serenity 
+      - name: Trigger Serenity proyect
         run: |
           curl -L \
           -X POST \
