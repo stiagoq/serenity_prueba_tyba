@@ -1,5 +1,5 @@
 Feature: Add products and checkout
-  @cart
+  @cartr
   Scenario: Add products to cart and checkout
     Given The user is in tab popular items
     When the user select and add of the products
