@@ -1,0 +1,20 @@
+name: Trigger Serenity Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger_serenity:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Serenity workflow
+        run: |
+          curl -X POST \
+          -H "Accept: application/vnd.github.v3+json" \
+          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          https://api.github.com/repos/<owner>/<repo>/dispatches \
+          -d '{"event_type": "trigger-serenity"}'
+
