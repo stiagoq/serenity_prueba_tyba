@@ -33,3 +33,10 @@ z
 Jsrc/main/java/test/certificationlogin/userInterfaces/HomePageUnitTest.java,7/2/72879a49e61ff5352eee27bc3c59c551162bc10d
 i
 9src/main/java/test/certificationlogin/task/LoginUser.java,a/f/afb0ad37553dd25529022c89818e107cda4b1ec2
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+A
+target/karate.log,a/0/a0c1eb5deceabdd10247320a3fd1024ffb337439
+_
+/src/test/resources/features/login/login.feature,a/4/a4ffa277a90a69a4e52dbb171a9ce542f38d6cf1

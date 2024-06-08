@@ -33,3 +33,10 @@ s
 Csrc/main/java/test/certificationlogin/questions/ResultRegister.java,3/5/355ccc9d1e2ae48719b52c3df469a64afba7d7ac
 p
 @src/main/java/test/certificationlogin/questions/ResultLogin.java,a/c/ac9bab2663d860a53ed6e5bd3acb3053605ea2da
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+A
+target/karate.log,a/0/a0c1eb5deceabdd10247320a3fd1024ffb337439
+_
+/src/test/resources/features/login/login.feature,a/4/a4ffa277a90a69a4e52dbb171a9ce542f38d6cf1
