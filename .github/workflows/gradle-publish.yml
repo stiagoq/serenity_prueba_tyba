@@ -1,36 +1,18 @@
-name: Trigger Target Workflow
+name: Send repository dispatch event
 
 on:
-  # Escucha el evento workflow_dispatch para activar manualmente este flujo de trabajo
   workflow_dispatch:
-    # Define dos entradas requeridas: target_service y target_version
-    inputs:
-      target_service:
-        description: 'Input a service name (e.g., demo-app)'
-        required: true
-      target_version:
-        description: 'Input a version (e.g., v1.0.0)'
-        required: true
 
 jobs:
-  trigger:
+  trigger-event:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Trigger Workflow in Another Repository
+      - name: Fire event
         run: |
-          # Set the required variables
-          repo_owner="stiagoq" 
-          repo_name="serenity_prueba_tyba"  
-          event_type="trigger-workflow" 
-          service="${{ github.event.inputs.target_service }}"
-          version="${{ github.event.inputs.target_version }}"
-  
-          # Realiza la solicitud POST a la API de GitHub para desencadenar el evento en el repositorio de destino
           curl -L \
             -X POST \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Authorization: Bearer ${{ secrets.REPOSITORY_ACCESS_TOKEN }}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            https://api.github.com/repos/$repo_owner/$repo_name/dispatches \
-            -d "{\"event_type\": \"$event_type\", \"client_payload\": {\"service\": \"$service\", \"version\": \"$version\", \"unit\": false, \"integration\": true}}"
+            https://api.github.com/repos/ngnijland/repository-dispatch-target-repo/dispatches \
+            -d '{"event_type":"dispatch-event"}'
