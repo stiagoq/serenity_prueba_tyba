@@ -1,7 +1,7 @@
 name: Send repository dispatch event
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   trigger_serenity:
