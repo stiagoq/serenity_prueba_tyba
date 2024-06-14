@@ -14,7 +14,8 @@ jobs:
           --header 'X-GitHub-Api-Version: 2022-11-28' \
           --header 'Accept: application/vnd.github+json' \
           --header 'Content-Type: application/json' \
-          --header 'Authorization: Bearer ${{ secrets.REPOSITORY_ACCESS_TOKEN }}' \
+          --header 'Authorization: ••••••' \
           --data '{
-              "ref":"main"
+              "ref":"main",
+              "inputs": {"runner": "RunCreateAccountFeature", "tags_in_scenario": true, "runnerTag":"edit"}
           }'
