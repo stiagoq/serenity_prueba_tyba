@@ -16,5 +16,6 @@ jobs:
           --header 'Content-Type: application/json' \
           --header 'Authorization: Bearer ${{ secrets.REPOSITORY_ACCESS_TOKEN }}' \
           --data '{
-              "ref":"main"
+              "ref":"main",
+              "inputs": {"tags_in_scenario": true}
           }'
