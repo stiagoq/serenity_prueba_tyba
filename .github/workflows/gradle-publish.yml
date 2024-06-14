@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger Serenity project
+      - name: Trigger Serenity 
         run: |
           curl --location 'https://api.github.com/repos/stiagoq/prueba_salesforce_sereniy/actions/workflows/ensayo.yml/dispatches' \
           --header 'X-GitHub-Api-Version: 2022-11-28' \
